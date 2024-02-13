@@ -6,6 +6,7 @@ import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import LoginSignup from "./pages/LoginSignup";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path=":productId" element={<Product />} />
         </Routes>
       </BrowserRouter>
+      <Hero />
     </div>
   );
 }
