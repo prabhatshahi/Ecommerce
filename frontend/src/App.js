@@ -24,7 +24,6 @@ function App() {
           <Route path=":productId" element={<Product />} />
         </Routes>
       </BrowserRouter>
-      <Hero />
     </div>
   );
 }
