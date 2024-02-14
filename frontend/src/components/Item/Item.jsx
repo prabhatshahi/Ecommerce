@@ -1,20 +1,17 @@
 import React from "react";
 import "./Item.css";
-import data_product from "../Assets/data";
+import { Link } from "react-router-dom";
 
-const Item = (props) => {
-  // Define props as an argument
+const Item = ({ id, image, name, new_price, old_price }) => {
   return (
     <div className="item">
-      <img src={props.image} alt="" />{" "}
-      {/* Use props.image instead of PaymentResponse.image */}
-      <p>{props.name}</p>
+      <Link to={`/product/${id}`}>
+        <img src={image} alt="" />
+      </Link>
+      <p>{name}</p>
       <div className="item-prices">
-        <div className="item-prices-new">${props.new_price}</div>
-        <div className="item-price-old">
-          ${props.old_price}
-          {/* <span>{props.discount}%</span> */}
-        </div>
+        <div className="item-prices-new">${new_price}</div>
+        <div className="item-price-old">${old_price}</div>
       </div>
     </div>
   );
